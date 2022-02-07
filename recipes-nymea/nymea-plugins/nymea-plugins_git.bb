@@ -31,6 +31,13 @@ PACKAGECONFIG[nuki] = ", WITHOUT_PLUGINS+=nuki, libsodium"
 PACKAGECONFIG[onewire] = ", WITHOUT_PLUGINS+=onewire, owfs"
 PACKAGECONFIG[serialportcommander] = ", WITHOUT_PLUGINS+=serialportcommander, qtserialport"
 PACKAGECONFIG[usbrelay] = ", WITHOUT_PLUGINS+=usbreleay, hidapi"
+PACKAGECONFIG[gpio] = ", WITHOUT_PLUGINS+=gpio, libnymea-gpio"
+
+# FIXME: disable by default because of some build issues:
+PACKAGECONFIG[bluos] = ", WITHOUT_PLUGINS+=bluos"
+PACKAGECONFIG[keba] = ", WITHOUT_PLUGINS+=keba"
+PACKAGECONFIG[solarlog] = ", WITHOUT_PLUGINS+=solarlog"
+
 
 EXTRA_QMAKEVARS_PRE += "CONFIG+=selection ${PACKAGECONFIG_CONFARGS}"
 
